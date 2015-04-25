@@ -15,7 +15,8 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+    /*max-width: 280px;*/
+    width:500px;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -26,4 +27,17 @@ textarea {
     .body-content {
         padding: 0;
     }
+}
+
+button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    height:25px; 
+    width:75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

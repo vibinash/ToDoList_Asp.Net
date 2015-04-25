@@ -2,19 +2,39 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <style type="text/css">
+        input {
+            width:500px;
+        }
+        .row button {
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+            height:25px; 
+            width:500px;
+            text-align: left;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+
     <div class="jumbotron">
         <h2>TODO List</h2>
-        <p class="lead">A Simple TODO List.</p>
-        <!-- 
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-            -->
+        <p class="lead">Your Personal TODO List</p>
     </div>
 
     <div class="row">
         <asp:PlaceHolder ID="TableContainer" runat="server"/>
     </div>
     <input type="text" runat="server" value="Add your task here" id="RowText"/>
-    <input type="submit" runat="server" onserverclick="SubmitBtn_Click" id="Submit" />
+    <!-- style="width:500px" -->
+    <button runat="server" onserverclick="SubmitBtn_Click" id="Submit"> Add task </button>
+    <!-- style="height:25px; width:75px" -->
+        <!-- onmouseover="this.style.backgroundColor='lightgreen'" onmouseout="this.style.backgroundColor='lightgrey'" --> 
+    <button style="height:25px; width:75px" runat="server" onserverclick="ClearBtn_Click" id="Clear"> Clear All </button>
     <label id="ErrorLabel" runat="server"></label>
+
 </asp:Content>
